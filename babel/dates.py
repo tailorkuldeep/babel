@@ -186,8 +186,6 @@ def get_timezone(zone=None):
     """
     if zone is None:
         return LOCALTZ
-    if not isinstance(zone, string_types):
-        return zone
     try:
         return _pytz.timezone(zone)
     except _pytz.UnknownTimeZoneError:
